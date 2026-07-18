@@ -1,59 +1,7 @@
 site_name: loglibrary
-site_description: A library dedicated to logarithms.
+site_description: A small wiki about logarithms.
 site_url: https://mcembalest.github.io/loglibrary/
-nav:
-  - Home:
-    - 'Welcome': index.md
-    - 'Help loglibrary': content/help-loglibrary.md
-  - AI:
-    - 'Introduction': content/ai/index.md
-    - 'Agents': content/ai/agents.md
-    - 'CV': content/ai/cv.md
-    - 'Embeddings': content/ai/embeddings.md
-    - 'LLMs': content/ai/llms.md
-    - 'NNS': content/ai/nns.md
-    - 'NLP': content/ai/nlp.md
-    - 'RL': content/ai/rl.md
-    - 'Transformers': content/ai/transformers.md
-  - Applications:
-    - 'Introduction': content/applications/index.md
-    - 'Customer Segmentation': content/applications/customer-segmentation.md
-    - 'Document Analysis': content/applications/document-analysis.md
-    - 'Fraud Detection': content/applications/fraud-detection.md
-    - 'Manufacturing Inspection': content/applications/manufacturing-inspection.md
-    - 'Photoshoots Style Search': content/applications/photoshoots-style-search.md
-  - Programming:
-    - 'Introduction': content/programming/index.md
-    - 'APIs': content/programming/apis.md
-    - 'JavaScript': content/programming/javascript.md
-    - 'Python': content/programming/python.md
-    - 'Terminals': content/programming/terminals.md
-    - 'Web Browsers': content/programming/web-browsers.md
-  - Computer Science:
-    - 'Introduction': content/cs/index.md
-    - 'Computational Complexity': content/cs/computational-complexity.md
-    - 'Formal Grammar': content/cs/formal-grammar.md
-    - 'Information Theory': content/cs/information-theory.md
-    - 'State Machines': content/cs/state-machines.md
-    - 'Turing Machines': content/cs/turing-machines.md
-  - Math:
-    - 'Introduction': content/math/index.md
-    - 'Calculus': content/math/calculus.md
-    - 'Graph Theory': content/math/graph-theory.md
-    - 'Linear Algebra': content/math/linear-algebra.md
-    - 'Probability and Statistics': content/math/probability-and-statistics.md
-  - Chronology:
-    - 'Introduction': content/chronology/index.md
-    - 'Past - 1600s': content/chronology/past-1600s.md
-    - '1600s': content/chronology/1600s.md
-    - '1700s': content/chronology/1700s.md
-    - '1800s': content/chronology/1800s.md
-    - '1900s': content/chronology/1900s.md
-    - '2000 - 2009': content/chronology/2000-2009.md
-    - '2010 - 2019': content/chronology/2010-2019.md
-    - '2020 - Present': content/chronology/2020-present.md
-  - Glossary:
-    - 'Glossary': content/glossary/index.md
+
 theme:
   name: material
   logo: assets/logo.png
@@ -61,17 +9,56 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - navigation.sections
+    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
 markdown_extensions:
   - attr_list
   - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Foundations:
+      - The logarithm: foundations/logarithm.md
+      - From products to sums: foundations/product-to-sum.md
+      - The natural logarithm: foundations/natural-log.md
+  - History:
+      - Napier: history/napier.md
+      - Briggs and base 10: history/briggs.md
+  - Interpretations:
+      - Length: interpretations/length.md
+      - Information and entropy: interpretations/entropy.md
+      - Complexity and addressing: interpretations/complexity.md
+      - Dimension and capacity: interpretations/dimension.md
+  - Logarithmic scales: scales.md
+  - Continued logarithms:
+      - Overview: clogs/index.md
+      - Two lineages: clogs/lineages.md
+      - Gallery: clogs/gallery.md
