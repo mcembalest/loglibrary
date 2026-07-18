@@ -8,6 +8,13 @@ Base-10 logarithms were the dominant tool for numerical computation — through 
 
 - Henry Briggs, *Arithmetica Logarithmica* (1624).
 
+### Translations
+
+Ian Bruce's English translations of Briggs (17thcenturymaths.com):
+
+- [*Arithmetica Logarithmica* (1624) — contents](https://www.17centurymaths.com/contents/albriggs.html)
+- [*Trigonometria Britannica* (1631) — contents](https://www.17centurymaths.com/contents/tbbriggs.htm)
+
 ## See also
 
 - [Logarithmic scales](../scales.md)

@@ -12,6 +12,7 @@ For $N$ equally likely outcomes, $H = \log_b N$. The logarithm is forced by the 
 
 - R. V. L. Hartley, "Transmission of Information" (1928).
 - C. E. Shannon, "A Mathematical Theory of Communication" (1948).
+- Christopher Olah, "Visual Information Theory" (2015). <https://colah.github.io/posts/2015-09-Visual-Information/>
 
 ## See also
 
