@@ -1,19 +1,33 @@
-# Deploy (Cloudflare Pages)
+# Deploy (Cloudflare Workers)
 
-The site is a static MkDocs build. Cloudflare Pages can build and host it for free, rebuilding on every push to `main`.
+The site is a static MkDocs build served from Cloudflare Workers via the `assets`
+block in `wrangler.jsonc` — an assets-only Worker (no Worker code). Same pattern
+as runway-atlas, stripped to the static case.
 
-## One-time setup (needs your Cloudflare login)
+## Recommended: git-connected auto-deploy (Workers Builds)
 
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-2. Select the `mcembalest/loglibrary` repo, production branch `main`.
+Every push to `main` — including from Claude Code on your phone — rebuilds and
+deploys automatically. **Needs your Cloudflare login (one-time).**
+
+1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Import a repository**.
+2. Select `mcembalest/loglibrary`, production branch `main`.
 3. Build settings:
-   - Framework preset: **None**
    - Build command: `pip install -r requirements.txt && mkdocs build`
-   - Build output directory: `site`
-   - Environment variable: `PYTHON_VERSION` = `3.12`
+   - Deploy command: `npx wrangler deploy`
+   - (Cloudflare reads `wrangler.jsonc` for the rest.)
 4. **Save and Deploy.**
 
-After this, every push to `main` rebuilds and deploys automatically. To use a custom domain, add it under the Pages project's **Custom domains** tab.
+Lands at `loglibrary.<your-subdomain>.workers.dev`. Add a custom domain under the
+Worker's **Settings → Domains & Routes**.
+
+## Alternative: deploy from the CLI
+
+Faster to stand up, but each deploy needs a terminal (won't fire from a phone):
+
+```bash
+wrangler login                       # one-time auth
+mkdocs build && npx wrangler deploy  # build, then push
+```
 
 ## Local preview
 

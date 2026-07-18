@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "loglibrary",
+  "compatibility_date": "2026-06-01",
+  // Pure static site: MkDocs builds into ./site and Cloudflare serves it
+  // directly. No Worker code (no "main"), no bindings — assets only.
+  "assets": {
+    "directory": "./site"
+  }
+}

@@ -2,3 +2,5 @@
 uv.lock
 node_modules
 site/
+.wrangler/
+node_modules/
