@@ -1,6 +1,6 @@
 site_name: loglibrary
 site_description: A small wiki about logarithms.
-site_url: https://mcembalest.github.io/loglibrary/
+site_url: https://loglibrary.macembalest.workers.dev/
 
 theme:
   name: material
