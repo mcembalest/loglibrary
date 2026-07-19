@@ -58,6 +58,9 @@ nav:
       - Complexity and addressing: interpretations/complexity.md
       - Dimension and capacity: interpretations/dimension.md
   - Logarithmic scales: scales.md
+  - Complex logarithms:
+      - Overview: complex/index.md
+      - The Escher print gallery: complex/escher-print-gallery.md
   - Continued logarithms:
       - Overview: clogs/index.md
       - Two lineages: clogs/lineages.md
