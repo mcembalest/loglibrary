@@ -7,7 +7,8 @@ B. de Smit and H. W. Lenstra showed that the image is built from a straight, sel
 ## References
 
 - Grant Sanderson (3Blue1Brown), "How (and why) to take a logarithm of an image" (2026). <https://www.youtube.com/watch?v=ldxFjLJ3rVY>
-- B. de Smit, H. W. Lenstra, "The Mathematical Structure of Escher's Print Gallery," *Notices of the AMS* (2003). Project site: <https://escherdroste.math.leidenuniv.nl/>
+- B. de Smit, H. W. Lenstra, "The Mathematical Structure of Escher's Print Gallery," *Notices of the AMS* (2003). <https://www.ams.org/notices/200304/fea-escher.pdf>
+- Project site (interactive): <https://escherdroste.math.leidenuniv.nl/>
 
 ## See also
 
